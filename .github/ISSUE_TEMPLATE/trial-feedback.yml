@@ -1,0 +1,65 @@
+name: Trial feedback
+description: Share a 60-second report after trying the Lite kit. Negative feedback is welcome.
+title: "[trial] "
+labels:
+  - feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing the Lite kit. Please do not include secrets, private repository content, or personal information.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Which best describes you?
+      options:
+        - Solo founder running a real business
+        - Developer experimenting with coding agents
+        - Small-team operator
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened when you tried it?
+      options:
+        - I adopted or adapted it for a real repository
+        - I completed the test but would not use it
+        - I could not complete the setup
+        - I reviewed it without trying it
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: What was the most useful or frustrating part?
+      placeholder: One or two sentences are enough.
+    validations:
+      required: true
+  - type: dropdown
+    id: reuse
+    attributes:
+      label: Would you use this control layer again?
+      options:
+        - Yes
+        - Maybe, after specific changes
+        - No
+    validations:
+      required: true
+  - type: dropdown
+    id: payment
+    attributes:
+      label: Would a fuller, maintained kit be worth a one-time US$19–39 purchase?
+      options:
+        - Yes, in that range
+        - Maybe, after seeing the full scope
+        - No, I only want the free version
+        - No, I would not use this category
+    validations:
+      required: true
+  - type: textarea
+    id: missing
+    attributes:
+      label: What single addition would change your answer?
+      placeholder: Optional. Please name the outcome, not a long feature list.
